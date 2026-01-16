@@ -1,29 +1,49 @@
 'use client';
 
-
 import { useState, useMemo } from 'react';
 import { Product } from '@/types';
 import ProductCard from './ProductCard';
 import FilterSidebar from './FilterSidebar';
-
-
 
 interface ProductListingPageProps {
   initialProducts: Product[];
   categories: string[];
 }
 
-export default function ProductListingPage({ initialProducts, categories }: ProductListingPageProps) {
+export default function ProductListingPage({
+  initialProducts,
+  categories,
+}: ProductListingPageProps) {
+  console.log("SSR initialProducts:", initialProducts);
+  console.log("SSR initialProducts length:", initialProducts.length);
+
   const [products] = useState<Product[]>(initialProducts);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<string>('recommended');
-  const [showFilters, setShowFilters] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
 
-const filteredAndSortedProducts = useMemo(() => {
-  return products;
-}, [products]);
+  // TEMP: bypass all filters
+  const filteredAndSortedProducts = useMemo(() => {
+    return products;
+  }, [products]);
 
+  console.log("CLIENT products length:", products.length);
+
+  return (
+    <div className="bg-gray-50 min-h-screen">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
+        <h1 className="text-2xl font-bold mb-4">Debug Product List</h1>
+
+        {filteredAndSortedProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredAndSortedProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-red-600 text-lg">No products found</p>
+        )}
+      </div>
+    </div>
+  );
+}
 
   return (
     <div className="bg-gray-50 min-h-screen">

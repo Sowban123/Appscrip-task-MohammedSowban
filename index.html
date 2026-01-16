@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our curated collection of high-quality products. Shop electronics, jewelry, men's and women's clothing with fast shipping and great prices.">
+    <meta name="keywords" content="online shopping, products, electronics, fashion, jewelry, clothing">
+    <meta name="author" content="AppScrip">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Discover Our Products | Premium Online Shopping Store">
+    <meta property="og:description" content="Explore our curated collection of high-quality products">
+    <meta property="og:type" content="website">
+    
+    <title>Discover Our Products | Premium Online Shopping Store</title>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SHOP.CO",
+      "url": "https://www.shop-co.com",
+      "logo": "https://www.shop-co.com/logo.png",
+      "description": "Premium online shopping store for quality products"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SHOP.CO",
+      "url": "https://www.shop-co.com"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Top Banner -->
+            <div class="header-top">
+                <div class="header-top-left">
+                    <span class="shipping-info">📍 Free shipping on orders above $50</span>
+                </div>
+                <div class="header-top-right">
+                    <a href="#" class="header-link">Help</a>
+                    <a href="#" class="header-link">Track Order</a>
+                    <a href="#" class="header-link">Account</a>
+                </div>
+            </div>
+            
+            <!-- Main Header -->
+            <div class="header-main">
+                <div class="header-left">
+                    <a href="/" class="logo">SHOP.CO</a>
+                    <nav class="nav-desktop">
+                        <a href="#" class="nav-link">Shop</a>
+                        <a href="#" class="nav-link">On Sale</a>
+                        <a href="#" class="nav-link">New Arrivals</a>
+                        <a href="#" class="nav-link">Brands</a>
+                    </nav>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="search" placeholder="Search for products..." class="search-input">
+                    </div>
+                    <button class="icon-btn" aria-label="Shopping cart">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn mobile-menu-btn" aria-label="Menu">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <span>Products</span>
+            </nav>
+
+            <!-- Page Title -->
+            <div class="page-header">
+                <h1>Discover Our Products</h1>
+                <p>Explore our wide range of high-quality products</p>
+            </div>
+
+            <!-- Filter and Sort Bar -->
+            <div class="filter-bar">
+                <div class="filter-bar-left">
+                    <button class="filter-btn mobile-filter-btn" id="mobileFilterBtn">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                        </svg>
+                        Filters
+                    </button>
+                    <span class="product-count"><span id="productCount">0</span> Products</span>
+                </div>
+
+                <div class="filter-bar-right">
+                    <label for="sortSelect" class="sort-label">Sort by:</label>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="recommended">Recommended</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar" id="sidebar">
+                    <div class="filter-section">
+                        <h2 class="filter-heading">CATEGORY</h2>
+                        <div class="filter-options" id="categoriesContainer">
+                            <!-- Categories will be loaded here -->
+                        </div>
+                        <button class="clear-filter-btn" id="clearDesktopFilters">Clear filters</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h2 class="filter-heading">PRICE</h2>
+                        <div class="filter-options" id="priceFiltersContainer">
+                            <!-- Price filters will be loaded here -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Mobile Filter Overlay -->
+                <div class="mobile-filter-overlay" id="mobileFilterOverlay">
+                    <div class="mobile-filter-drawer">
+                        <div class="mobile-filter-header">
+                            <h2>FILTERS</h2>
+                            <button class="close-btn" id="closeMobileFilter">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mobile-filter-content">
+                            <!-- Same filters as sidebar -->
+                            <div class="filter-section">
+                                <h2 class="filter-heading">CATEGORY</h2>
+                                <div class="filter-options" id="mobileCategoriesContainer">
+                                    <!-- Categories will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div class="filter-section">
+                                <h2 class="filter-heading">PRICE</h2>
+                                <div class="filter-options" id="mobilePriceFiltersContainer">
+                                    <!-- Price filters will be loaded here -->
+                                </div>
+                                <button class="clear-filter-btn" id="clearMobileFilters">Clear filters</button>
+                            </div>
+                        </div>
+                        <button class="show-results-btn" id="showResultsBtn">Show Results</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid">
+                    <div class="products" id="productsGrid">
+                        <!-- Loading State -->
+                        <div class="loading">Loading products...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">SHOP.CO</h3>
+                    <p class="footer-text">Your trusted online shopping destination for quality products at great prices.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Help</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-column newsletter">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to get updates on new products and offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> SHOP.CO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

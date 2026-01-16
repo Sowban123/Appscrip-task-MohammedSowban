@@ -115,7 +115,7 @@ export default function ProductListingPage({ initialProducts, categories }: Prod
       {/* Main Content */}
       <div className="flex gap-6 lg:gap-8">
         {/* Sidebar Filters - Desktop */}
-        <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
+        <aside className="hidden lg:block w-64 xl:w-72 shrink-0">
           <div className="bg-white rounded-lg border border-gray-200 p-5 lg:p-6 sticky top-24">
             <FilterSidebar
               categories={categories}

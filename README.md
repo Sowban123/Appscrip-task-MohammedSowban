@@ -68,20 +68,7 @@ https://fakestoreapi.com/
 
 ---
 
-src/
-├── app/
-│   ├── layout.tsx        # Root layout + metadata
-│   ├── page.tsx          # SSR product fetch
-│   └── globals.css
-├── components/
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── ProductListingPage.tsx
-│   ├── ProductCard.tsx
-│   ├── FilterSidebar.tsx
-│   └── SchemaMarkup.tsx
-└── types/
-    └── index.ts
+
 
 
 
@@ -123,6 +110,20 @@ cd Appscrip-task-Mohammed-Sowban
 npm install
 npm run dev
 
+src/
+├── app/
+│   ├── layout.tsx        # Root layout + metadata
+│   ├── page.tsx          # SSR product fetch
+│   └── globals.css
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── ProductListingPage.tsx
+│   ├── ProductCard.tsx
+│   ├── FilterSidebar.tsx
+│   └── SchemaMarkup.tsx
+└── types/
+    └── index.ts
 
 
 

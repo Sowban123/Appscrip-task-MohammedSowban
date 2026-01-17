@@ -68,19 +68,6 @@ https://fakestoreapi.com/
 
 ---
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/Sowban123/Appscrip-task-Mohammed-Sowban.git
-cd Appscrip-task-Mohammed-Sowban
-npm install
-npm run dev
-
-
-
-
-
-
 src/
 ├── app/
 │   ├── layout.tsx        # Root layout + metadata
@@ -127,6 +114,18 @@ Public Deployment	✅
 📄 License
 
 This project is created strictly for the Appscrip Technical Assessment.
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Sowban123/Appscrip-task-Mohammed-Sowban.git
+cd Appscrip-task-Mohammed-Sowban
+npm install
+npm run dev
+
+
+
+
 
 
 

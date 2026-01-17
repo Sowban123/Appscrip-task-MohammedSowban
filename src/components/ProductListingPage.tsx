@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo ,useEffect } from 'react';
+import { useState, useMemo  } from 'react';
 import { Product } from '@/types';
 import ProductCard from './ProductCard';
 import FilterSidebar from './FilterSidebar';
@@ -10,12 +10,7 @@ interface ProductListingPageProps {
   initialProducts: Product[];
   categories: string[];
 }
-export default function ProductListingPage({ initialProducts, categories }: ProductListingPageProps) {
 
-  useEffect(() => {
-    console.log("CLIENT Products:", initialProducts.length);
-    console.log("CLIENT Products data:", initialProducts);
-  }, [initialProducts]);
 export default function ProductListingPage({ initialProducts, categories }: ProductListingPageProps) {
   const [products] = useState<Product[]>(initialProducts);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
